@@ -1,10 +1,9 @@
-﻿name: ci
+name: ci
 
 on:
   push:
     branches:
       - "master"
- 
 
 jobs:
   build:
@@ -22,7 +21,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./DockerAPI/.
-          file: ./DockerAPI/Dockerfile
+          context: ./DockerAPI/DockerAPI/.
+          file: ./DockerAPI/DockerAPI/Dockerfile
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/clockbox:latest
