@@ -27,4 +27,4 @@ jobs:
           context: .
           file: ./DockerAPI/Dockerfile
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/clockbox:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/api-docker:latest
