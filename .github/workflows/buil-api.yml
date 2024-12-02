@@ -27,7 +27,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./DockerApi/
-          file: ./Dockerfile
+          context: ./DockerAPI/.
+          file: ./DockerAPI/DockerAPI/Dockerfile
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/clockbox:latest
