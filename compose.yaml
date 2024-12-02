@@ -3,7 +3,7 @@
     build:
         context: .
         dockerfile: ./DockerAPI/Dockerfile
-    image: api:latest
+    image: shpsyte/api-docker
     container_name: api
     ports:
       - "1234:5000"
