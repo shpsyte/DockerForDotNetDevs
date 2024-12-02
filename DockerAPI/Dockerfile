@@ -3,9 +3,9 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 # Setting the working directory to /app
 WORKDIR /app
 # Copying the project file to the working directory
-COPY ["DockerAPI.csproj", "DockerAPI/"]
+COPY ["DockerAPI/DockerAPI.csproj", "DockerAPI/"]
 # Restoring the dependencies
-RUN dotnet restore "DockerAPI.csproj"
+RUN dotnet restore "DockerAPI/DockerAPI.csproj"
 # The layer will be cached if there are no changes in the project file
 
 
