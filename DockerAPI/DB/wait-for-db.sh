@@ -9,7 +9,7 @@ for i in {1..50}; do
     break
   else
     echo "Not ready yet..."
-    sleep 1
+    sleep 2
   fi
 done
 

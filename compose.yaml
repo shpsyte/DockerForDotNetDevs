@@ -1,4 +1,7 @@
-﻿services:
+﻿volumes:
+  sql_db_data:
+      
+services:
   api:
     build:
         context: .
@@ -16,6 +19,8 @@
       - MSSQL_SA_PASSWORD=Test@123
     ports:
       - "1433:1433"
+    volumes:
+        - sql_db_data:/var/opt/mssql
   
   database-seed:
     depends_on:
